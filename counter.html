@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: #a8e1f2;
+        }
+
+        .btn {
+            padding: 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .cli-btn {
+            background: #b2a5ed;
+            border-color: #b2a5ed;
+            color: #262628;
+        }
+
+        .res-btn {
+            background: #eda5d6;
+            border-color: #eda5d6;
+            color: #262628;
+        }
+    </style>
+    <script type="text/javascript">
+        var counterVal = 0;
+
+        function incrementClick() {
+            updateDisplay(++counterVal);
+        }
+        function restCounter() {
+            counterVal = 0;
+            updateDisplay(counterVal);
+        }
+        function updateDisplay(val) {
+            document.getElementById("conter-Lable").innerHTML = val;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="flex">
+        <h2>
+            <center>Click counter</center>
+        </h2>
+        <div>
+            <center>
+                <h3 id="conter-Lable">0</h3>
+            </center>
+        </div>
+        <center>
+            <div>
+                <button onclick="incrementClick()" class="btn cli-btn">Click me</button>
+                <button onclick="restCounter()" class="btn res-btn">Reset</button>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
